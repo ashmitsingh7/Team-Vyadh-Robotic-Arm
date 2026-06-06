@@ -6,18 +6,41 @@ This repository documents the embedded, mechanical, and control subsystems devel
 
 ---
 
+# Robotic Arm Platform
+
+## Competition Deployment
+
+![img](images/people/WhatsApp%20Image%202026-06-06%20at%2012.55.33%20PM.jpeg)
+
+![img](images/people/WhatsApp%20Image%202026-06-06%20at%2012.29.01%20PM.jpeg)
+
+![img](images/people/WhatsApp%20Image%202026-06-06%20at%2012.29.01%20PM%20(1).jpeg)
+
+---
+
+# Arm Assembly & Mechanisms
+
+![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.29.00%20PM.jpeg)
+
+![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.29.00%20PM%20(1).jpeg)
+
+![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.55.32%20PM.jpeg)
+
+![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.55.32%20PM%20(1).jpeg)
+
+---
+
 # Team Vyadh Experience
 
-Served as a Senior Core Member in the Robotic Arm Domain at Team Vyadh, contributing to the development, integration, and deployment of rover manipulation systems over the course of one year.
+Served as a Senior Core Member in the Robotic Arm Domain at Team Vyadh, contributing to the development, integration, and deployment of embedded and mechanical subsystems for a competition-oriented multi-DOF robotic manipulator designed for Mars rover applications.
 
 Worked extensively across:
-
-* embedded systems
-* robotic arm control
-* encoder feedback architectures
-* mechanical subsystem design
-* PCB and electronics integration
-* competition deployment infrastructure
+- embedded systems
+- robotic arm control
+- encoder feedback architectures
+- mechanical subsystem design
+- PCB and electronics integration
+- competition deployment infrastructure
 
 The work involved both low-level firmware development and real-world hardware deployment under dynamic operating conditions.
 
@@ -30,10 +53,9 @@ The work involved both low-level firmware development and real-world hardware de
 Developed and experimented with high-resolution encoder feedback systems for IG32 DC encoded motors using ESP32-based processing.
 
 Implemented:
-
-* 9048 CPR magnetic encoder systems
-* ~232,464 CPR optical encoder handling
-* hybrid encoder architectures combining motor encoders and AS5600 magnetic absolute encoders
+- 9048 CPR magnetic encoder systems
+- ~232,464 CPR optical encoder handling
+- hybrid encoder architectures combining motor encoders and AS5600 magnetic absolute encoders
 
 Designed custom encoder mounting hardware for precise sensor alignment and vibration-resistant operation.
 
@@ -54,10 +76,9 @@ Designed and fabricated custom mounting hardware for reliable switch triggering 
 Designed multiple custom robotic arm mounting systems for subsystem integration and deployment reliability.
 
 This included:
-
-* MD10C motor driver mounts
-* PCB/protoboard retention systems
-* wire management and routing structures
+- MD10C motor driver mounts
+- PCB/protoboard retention systems
+- wire management and routing structures
 
 The PCB retention system was specifically designed with controlled sliding tolerances to prevent PCB displacement during robotic arm motion.
 
@@ -68,12 +89,11 @@ These mounts were deployed on the final competition robotic arm platform.
 ## Embedded Systems & Control
 
 Worked on embedded subsystem development for robotic arm operation, including:
-
-* ESP32-based encoder processing
-* interrupt-driven feedback systems
-* joint positioning logic
-* calibration workflows
-* modular embedded integration
+- ESP32-based encoder processing
+- interrupt-driven feedback systems
+- joint positioning logic
+- calibration workflows
+- modular embedded integration
 
 Contributed to subsystem integration and testing under real deployment conditions.
 
@@ -82,12 +102,11 @@ Contributed to subsystem integration and testing under real deployment condition
 # System Overview
 
 The robotic arm was developed as a modular manipulation platform capable of:
-
-* precise joint positioning
-* encoder-based feedback control
-* wrist homing and calibration
-* modular electronics integration
-* vibration-resistant operation
+- precise joint positioning
+- encoder-based feedback control
+- wrist homing and calibration
+- modular electronics integration
+- vibration-resistant operation
 
 The project involved the integration of embedded firmware, custom mechanical hardware, and robotic subsystem design for real-world rover deployment.
 
@@ -96,22 +115,19 @@ The project involved the integration of embedded firmware, custom mechanical har
 # Technologies Used
 
 ## Embedded Systems
-
-* ESP32
-* Encoder interfaces
-* Interrupt-driven feedback systems
+- ESP32
+- Encoder interfaces
+- Interrupt-driven feedback systems
 
 ## Robotics & Control
-
-* Closed-loop feedback systems
-* Joint calibration
-* Differential wrist mechanisms
+- Closed-loop feedback systems
+- Joint calibration
+- Differential wrist mechanisms
 
 ## Mechanical Design
-
-* Fusion360
-* 3D printed subsystem hardware
-* Modular mounting systems
+- Fusion360
+- 3D printed subsystem hardware
+- Modular mounting systems
 
 ---
 
