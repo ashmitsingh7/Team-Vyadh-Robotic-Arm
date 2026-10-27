@@ -10,23 +10,23 @@ This repository documents the embedded, mechanical, and control subsystems devel
 
 ## Competition Deployment
 
-![img](images/people/WhatsApp%20Image%202026-06-06%20at%2012.55.33%20PM.jpeg)
+![img](images/people/people_03.jpeg)
 
-![img](images/people/WhatsApp%20Image%202026-06-06%20at%2012.29.01%20PM.jpeg)
+![img](images/people/people_01.jpeg)
 
-![img](images/people/WhatsApp%20Image%202026-06-06%20at%2012.29.01%20PM%20(1).jpeg)
+![img](images/people/people_02.jpeg)
 
 ---
 
 # Arm Assembly & Mechanisms
 
-![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.29.00%20PM.jpeg)
+![img](images/arm/arm_01.jpeg)
 
-![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.29.00%20PM%20(1).jpeg)
+![img](images/arm/arm_02.jpeg)
 
-![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.55.32%20PM.jpeg)
+![img](images/arm/arm_03.jpeg)
 
-![img](images/arm/WhatsApp%20Image%202026-06-06%20at%2012.55.32%20PM%20(1).jpeg)
+![img](images/arm/arm_04.jpeg)
 
 ---
 
