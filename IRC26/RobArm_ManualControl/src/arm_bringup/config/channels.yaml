@@ -1,0 +1,53 @@
+# Per-channel ROS-side configuration (DRAFT schema, consumed starting Phase 3).
+#
+# *** EVERY VALUE BELOW IS AN UNCALIBRATED PLACEHOLDER. ***
+# Nothing here has been verified on hardware. Do not assume motors share polarity,
+# that "positive" is mechanically correct, or that any limit is right. Verify one
+# channel at a time with the mechanism secured, then update this file.
+#
+# These are ROS-side software limits. They do NOT replace the STM32's independent
+# safety checks (timeouts, stall protection, output limits), and they say nothing
+# about ramping: ramp rates belong to the firmware.
+#
+# Loaded only by manual_control_node. Doubles MUST be written with a decimal point (0.20, not 1).
+# Channel numbering: m1..m7 = channel 1..7 in messages (see arm_control/channels.py).
+
+manual_control_node:
+  ros__parameters:
+    channels:
+      m1:   # turntable
+        polarity: 1          # UNCALIBRATED. +1 or -1: maps operator "positive" to firmware "positive"
+        max_demand: 0.20     # UNCALIBRATED conservative placeholder, fraction of firmware full-scale (0..1]
+        enabled: true        # false = ROS side refuses to command this channel
+      m2:   # shoulder linear actuator (AS5600 joint angle feedback)
+        polarity: 1
+        max_demand: 0.20
+        enabled: true
+        joint_limits_enabled: false   # no limits known yet; enabling requires calibrated angles
+        joint_min_rad: 0.0            # UNKNOWN placeholder, ignored while joint_limits_enabled is false
+        joint_max_rad: 0.0            # UNKNOWN placeholder
+        angle_sign: 1                 # UNCALIBRATED: +1 if +firmware direction increases the AS5600 angle
+      m3:   # elbow linear actuator (AS5600 joint angle feedback)
+        polarity: 1
+        max_demand: 0.20
+        enabled: true
+        joint_limits_enabled: false
+        joint_min_rad: 0.0
+        joint_max_rad: 0.0
+        angle_sign: 1                 # UNCALIBRATED
+      m4:   # wrist pitch
+        polarity: 1
+        max_demand: 0.20
+        enabled: true
+      m5:   # wrist differential motor A (independent; no roll/yaw mapping defined)
+        polarity: 1
+        max_demand: 0.20
+        enabled: true
+      m6:   # wrist differential motor B (independent; no roll/yaw mapping defined)
+        polarity: 1
+        max_demand: 0.20
+        enabled: true
+      m7:   # gripper lead screw (current sensor only; no position)
+        polarity: 1          # UNCALIBRATED: which sign means "close" is unknown
+        max_demand: 0.20
+        enabled: true

@@ -1,0 +1,11 @@
+# keyboard_teleop_node settings.
+keyboard_teleop_node:
+  ros__parameters:
+    hold_window_s: 0.6        # each key press/auto-repeat keeps a channel moving this long. Stop latency after
+                              # key release is about this value (+ firmware ramp-down). NOT the hardware watchdog.
+                              # Must exceed the OS keyboard auto-repeat initial delay (often ~0.5 s) or motion
+                              # will stutter between the first press and the first repeat.
+    publish_rate_hz: 20.0     # refresh rate for held keys; its period must be shorter than hold_window_s
+    initial_level: 0.5        # speed level 0..1, a fraction of each channel's max_demand
+    level_step: 0.1
+    min_level: 0.1

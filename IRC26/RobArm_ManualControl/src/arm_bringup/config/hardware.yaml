@@ -1,0 +1,21 @@
+# Bridge settings (mock and serial). Rates/timeouts are DEVELOPMENT DEFAULTS, not hardware
+# specifications; the real command timeout is owned by the STM32 firmware.
+mock_arm_bridge:
+  ros__parameters:
+    telemetry_rate_hz: 20.0
+    diagnostics_rate_hz: 2.0
+    sim_command_timeout_s: 0.5            # SIMULATED firmware watchdog
+    telemetry_stale_after_s: 0.5
+    simulate_comm_loss: false             # change at runtime: ros2 param set /mock_arm_bridge simulate_comm_loss true
+    simulate_invalid_sensor_channel: 0    # 1..7 marks that channel's sensor invalid; 0 = none
+
+serial_arm_bridge:
+  ros__parameters:
+    serial_port: /dev/ttyACM0             # override: serial_port:=/dev/ttyACM1 on the launch command
+    baudrate: 115200                      # must match the STM32 (ST-LINK VCP is a real UART)
+    write_timeout_s: 0.1
+    poll_rate_hz: 100.0
+    diagnostics_rate_hz: 2.0
+    telemetry_stale_after_s: 0.5
+    reconnect_interval_s: 1.0
+    exit_on_initial_open_failure: true    # fail loudly at startup; never falls back to mock

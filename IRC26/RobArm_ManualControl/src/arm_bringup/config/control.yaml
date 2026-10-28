@@ -1,0 +1,19 @@
+# manual_control_node and arm_state_monitor settings. DEVELOPMENT DEFAULTS, not hardware
+# specifications. Doubles must keep a decimal point.
+manual_control_node:
+  ros__parameters:
+    command_rate_hz: 20.0         # ArmCommand snapshot (heartbeat) rate. Firmware timeout must be > several periods.
+    input_timeout_s: 0.3          # backup deadman: a MOVE not refreshed within this expires (NOT the hardware watchdog)
+    require_fresh_state: true     # refuse new motion without fresh telemetry + healthy link. false = bring-up only!
+    state_stale_after_s: 0.5      # /arm/state older than this is STALE
+    diag_stale_after_s: 5.0       # /arm/diagnostics older than this counts as missing
+    blocking_faults_mask: 98      # ESTOP_LATCHED(2) | DRIVER(32) | FIRMWARE_WATCHDOG(64): refuse NEW motion. Placeholder policy.
+    rearm_repeat: 5               # REARM commands published after an operator REARM
+    stop_repeat: 3                # STOP commands published after an operator STOP
+
+arm_state_monitor:
+  ros__parameters:
+    report_period_s: 1.0
+    state_stale_after_s: 0.5
+    diag_stale_after_s: 5.0
+    blocking_faults_mask: 98
